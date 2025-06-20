@@ -1,9 +1,6 @@
 streamlit
-SpeechRecognition
-pyttsx3
 openai
-pyaudio
-gTTS
+SpeechRecognition
+gtts
+playsound
 python-dotenv
-
-

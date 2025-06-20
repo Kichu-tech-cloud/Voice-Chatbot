@@ -2,6 +2,7 @@ import streamlit as st
 import openai
 import speech_recognition as sr
 from gtts import gTTS
+from playsound import playsound
 import os
 from dotenv import load_dotenv
 from difflib import get_close_matches
