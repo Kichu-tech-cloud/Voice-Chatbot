@@ -38,8 +38,8 @@ def recognize_speech():
             return recognizer.recognize_google(audio)
         except sr.UnknownValueError:
             return "Sorry, I couldn't understand that."
-        except sr.RequestError:
-            return "Error with speech recognition service."
+        except sr.RequestError as e:
+            return f"Error with speech recognition service: {e}"
 
 # Convert text to speech and play
 def speak(text):
