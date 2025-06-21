@@ -2,5 +2,4 @@ streamlit
 openai
 SpeechRecognition
 gTTS
-playsound
 python-dotenv
