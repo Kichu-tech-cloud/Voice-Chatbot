@@ -1,8 +1,7 @@
 import streamlit as st
 import openai
 import speech_recognition as sr
-from gtts import gTTS
-from playsound import playsound
+import pyttsx3
 import os
 from dotenv import load_dotenv
 from difflib import get_close_matches
@@ -48,9 +47,9 @@ def recognize_speech():
 
 
 def speak(text):
-    tts = gTTS(text=text, lang='en')
-    tts.save("response.mp3")
-    st.audio("response.mp3", format="audio/mp3")
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
 
 
 def query_openai(user_query):
